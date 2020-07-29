@@ -1,0 +1,90 @@
+﻿{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/auth/{url}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/auth/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.11.237",
+          "Port": 5011
+        }
+      ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 50100
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/api/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.11.237",
+          "Port": 5012
+        }
+      ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 50100
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [
+        ]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/bussiness/{url}",
+      "DownstreamScheme": "http",
+      "UpstreamPathTemplate": "/bussiness/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.11.237",
+          "Port": 5013
+        }
+      ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 50100
+      },
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [
+        ]
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/afterengine/{url}",
+      "DownstreamScheme": "192.168.11.237",
+      "UpstreamPathTemplate": "/afterengine/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post", "Delete", "Put" ],
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 5014
+        }
+      ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 501000
+      },
+
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Bearer",
+        "AllowedScopes": [
+        ]
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+  }
+}

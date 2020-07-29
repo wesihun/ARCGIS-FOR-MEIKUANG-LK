@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ExcelTemplate\**" />
+    <Content Remove="ExcelTemplate\**" />
+    <EmbeddedResource Remove="ExcelTemplate\**" />
+    <None Remove="ExcelTemplate\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\ExportExcelController.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.4" />
+    <PackageReference Include="NLog" Version="4.5.8" />
+    <PackageReference Include="NPOI" Version="2.4.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Ocelot.JWTAuthorize\Ocelot.JWTAuthorize.csproj" />
+    <ProjectReference Include="..\XY.Authorize\XY.Authorize.csproj" />
+    <ProjectReference Include="..\XY.DataNS\XY.DataNS.csproj" />
+    <ProjectReference Include="..\XY.SystemManage\XY.SystemManage.csproj" />
+  </ItemGroup>
+
+</Project>

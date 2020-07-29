@@ -1,0 +1,40 @@
+{
+    "encrypt": "7TnJPB4lKtjEcCWWjN6jSA==",
+    "services": [{
+    "id":"XY.AfterCheckEngine.WebApi",
+    "name":"XY.AfterCheckEngine.WebApi",
+    "tags":["XY.AfterCheckEngine.WebApi"],
+    "address": "192.168.100.147",
+    "port": 5004,
+    "checks": [
+    {
+	    "id":"XY.AfterCheckEngine.WebApiCheck",
+	    "name":"XY.AfterCheckEngine.WebApiCheck",
+        "http": "http://192.168.100.147:5004/afterengine",
+        "interval": "10s",
+        "tls_skip_verify": false,
+        "method": "GET",  
+        "timeout": "1s"
+    }
+    ]
+    },
+    {
+    "id":"XY.SystemManage.WebApi",
+    "name":"XY.SystemManage.WebApi",
+    "tags":["XY.SystemManage.WebApi"],
+    "address": "192.168.100.147",
+    "port": 5002,
+    "checks": [
+    {
+	    "id":"XY.SystemManage.WebApiCheck",
+	    "name":"XY.SystemManage.WebApiCheck",
+        "http": "http://192.168.100.147:5002/api",
+        "interval": "10s",
+        "tls_skip_verify": false,
+        "method": "GET",  
+        "timeout": "1s"
+    }
+    ]
+    }
+	]
+}

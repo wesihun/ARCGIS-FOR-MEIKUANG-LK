@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="sqlSugarCore" Version="5.0.0.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XY.DataCache.Redis\XY.DataCache.Redis.csproj" />
+    <ProjectReference Include="..\XY.DataNS\XY.DataNS.csproj" />
+    <ProjectReference Include="..\XY.SystemManage\XY.SystemManage.csproj" />
+    <ProjectReference Include="..\XY.Universal.Models\XY.Universal.Models.csproj" />
+    <ProjectReference Include="..\XY.Utilities\XY.Utilities.csproj" />
+    <ProjectReference Include="..\XY.ZnshBusiness\XY.ZnshBusiness.csproj" />
+  </ItemGroup>
+
+</Project>
